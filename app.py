@@ -7,7 +7,7 @@ st.set_page_config(page_title="Dashboard Ponctualité TGV", layout="wide")
 
 @st.cache_data
 def get_data():
-    df = load_data("data/raw/regularite-mensuelle-tgv-aqst.csv")
+    df = load_data()
     df = clean_data(df)
     return df
 

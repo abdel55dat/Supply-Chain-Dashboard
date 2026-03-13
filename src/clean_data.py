@@ -1,7 +1,8 @@
 import pandas as pd
 
-def load_data(filepath):
-    df = pd.read_csv(filepath, sep=";")
+def load_data(filepath=None):
+    url = "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/regularite-mensuelle-tgv-aqst/exports/csv?delimiter=%3B&lang=fr&timezone=Europe%2FParis"
+    df = pd.read_csv(url, sep=";")
     return df
 
 def clean_data(df):
